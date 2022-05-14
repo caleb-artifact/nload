@@ -101,11 +101,21 @@ void Graph::print(Window& window, int x, int y)
                 unsigned long long restOfTraffic = *r - lowerLimit;
 
                 if(restOfTraffic >= trafficPerLine)
-                    window.print('#');
-                else if(restOfTraffic >= trafficPerLine * 7 / 10)
-                    window.print('|');
-                else if(restOfTraffic >= trafficPerLine * 3 / 10)
-                    window.print('.');
+                    window.print('█');
+                else if(restOfTraffic >= trafficPerLine * 7 / 8)
+                    window.print('▇');
+                else if(restOfTraffic >= trafficPerLine * 6 / 8)
+                    window.print('▆');
+                else if(restOfTraffic >= trafficPerLine * 5 / 8)
+                    window.print('▅');
+                else if(restOfTraffic >= trafficPerLine * 4 / 8)
+                    window.print('▄');
+                else if(restOfTraffic >= trafficPerLine * 3 / 8)
+                    window.print('▃');
+                else if(restOfTraffic >= trafficPerLine * 2 / 8)
+                    window.print('▂');
+                else if(restOfTraffic >= trafficPerLine * 1 / 8)
+                    window.print('▁');
                 else
                     window.print(' ');
             }
